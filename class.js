@@ -11,3 +11,15 @@
  */
 
 
+function Polygon (sideLengthsArray) {
+  this.lengths = sideLengthsArray
+}
+
+Polygon.prototype.perimeter = function() {
+  return this.lengths.reduce((accumulator, currentValue) => {
+      return accumulator + currentValue
+  }, 0)
+}
+
+let triange = new Polygon([10, 12, 3]);
+console.log(triange.perimeter());
