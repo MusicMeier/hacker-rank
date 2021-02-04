@@ -20,14 +20,13 @@
 
 function modifyArray(nums) {
   
-  nums.filter(number => {
+  return nums.map(number => {
       if(number % 2 === 0){
           return number * 2
       } else {
           return number * 3
       }
     })
-    return nums
 }
 
 console.log(modifyArray([1, 2, 3, 4, 5, 6, 7]))
