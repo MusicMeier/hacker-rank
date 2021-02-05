@@ -5,5 +5,15 @@
  * objects: an array of objects with integer properties 'x' and 'y'
  */
 function getCount(objects) {
-    
+  let count = 0;
+  objects.filter(object => {
+      if(object.x == object.y){
+          return count ++
+      } else {
+          return count
+      }
+  })
+  return count;
 }
+
+console.log(getCount([{x: 1, y: 1}, {x: 2, y: 1}, {x: 2, y: 2}, {x: 3, y: 3}]))
